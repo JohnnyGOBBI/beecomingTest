@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListService } from '../services/list.service';
-import { Capitals } from './list'
+import { Capital } from './list'
 
 @Component({
   selector: 'app-list',
@@ -9,13 +9,13 @@ import { Capitals } from './list'
 })
 export class ListComponent implements OnInit {
 
-  capitals!: Capitals[];
+  capitals!: Capital[];
 
   constructor(private listService: ListService) { }
 
   ngOnInit(): void {
     this.listService.getCapitals().subscribe(
-      (response: Capitals[]) => {
+      (response: Capital[]) => {
         this.capitals = response;
       })
   }
