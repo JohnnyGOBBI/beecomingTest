@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { Loader } from "@googlemaps/js-api-loader"
 import { Capital } from '../list/list'
 
