@@ -1,0 +1,15 @@
+* {
+    height: 5vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #282828;
+}
+
+button {
+    height:50%;
+}
