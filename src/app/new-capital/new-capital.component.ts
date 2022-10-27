@@ -4,6 +4,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Observable } from 'rxjs/internal/Observable';
 import { Capital } from '../list/capital';
 import { ListService } from '../services/list.service';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-new-capital',
