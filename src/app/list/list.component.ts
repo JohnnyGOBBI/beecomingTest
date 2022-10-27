@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ListService } from '../services/list.service';
-import { Capital } from './list'
+import { Capital } from './capital'
 
 @Component({
   selector: 'app-list',
@@ -9,10 +10,16 @@ import { Capital } from './list'
 })
 export class ListComponent implements OnInit {
 
+  showForm = false;
+
+  capitalName!: string 
+
   capitals!: Capital[];
 
-  constructor(private listService: ListService) { }
+  editingCapital: Capital | undefined;
 
+  constructor(private listService: ListService, private router: Router) { }
+  
   ngOnInit(): void {
     this.listService.getCapitals().subscribe(
       (response: Capital[]) => {
@@ -20,4 +27,18 @@ export class ListComponent implements OnInit {
       })
   }
 
+  onDeleteCapital(id?: number): void {
+    if(id) {
+      this.listService.deleteCapital(id).subscribe();
+  }
+  }
+
+  onEditCapital(capital: Capital): void {
+    this.editingCapital = undefined;
+    this.editingCapital = capital;
+  }
+
 }
+
+
+

@@ -1,12 +1,16 @@
-<p>map works!</p>
+<div [id]="'map'">
+    <a *ngfor="let label">
+        {{label.name}}
+    </a>
+</div>
 
-<a routerLink="/list">lien vers la liste</a>
+<!-- <select [(ngModel)]="selectedCapital" (change)="setSelectedCapital()">
+    <option *ngFor="let capital of capitals" [ngValue]="capital">{{capital.name}}</option>
+</select> -->
 
-
-
-
-<div [id]="'map'"></div>
-
-<button (click)="changeCapital()">
-    select
-</button>
+<div class="capitalData" *ngIf="selectedCapital">
+   <h1>{{selectedCapital.name}}</h1>
+   <h3>Pays: {{selectedCapital.country}}</h3>
+   <h3>Population: {{selectedCapital.population}}</h3>
+   <button (click)="unsetZoom()">Retour à la carte</button>
+</div>
