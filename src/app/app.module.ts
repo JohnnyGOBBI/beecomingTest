@@ -7,18 +7,23 @@ import { MapComponent } from './map/map.component';
 import { NavComponent } from './nav/nav.component';
 import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NewCapitalComponent } from './new-capital/new-capital.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponent,
     NavComponent,
-    ListComponent
+    ListComponent,
+    NewCapitalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

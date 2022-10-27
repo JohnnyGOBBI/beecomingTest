@@ -1,7 +1,8 @@
 export interface Capital {
-    id: number;
+    id?: number;
     name: string;
     population: string;
-    zoom: number;
+    country: string;
+    zoom?: number;
     center: {lat: number, lng: number};
 }
