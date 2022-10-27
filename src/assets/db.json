@@ -1,7 +1,6 @@
 {
   "capitals": [
     {
-      "id": 1,
       "name": "Paris",
       "population": "2,16 Millions",
       "country": "France",
@@ -9,18 +8,8 @@
       "center": {
         "lat": 48.856614,
         "lng": 2.3522219
-      }
-    },
-    {
-      "id": 2,
-      "name": "Tokyo",
-      "population": "13,96 Millions",
-      "country": "Japon",
-      "zoom": 10,
-      "center": {
-        "lat": 35.6794327,
-        "lng": 139.7712666
-      }
+      },
+      "id": 1
     },
     {
       "name": "Berlin",
@@ -54,6 +43,17 @@
         "lng": 116.4037
       },
       "id": 5
+    },
+    {
+      "name": "Tokyo",
+      "population": "13,96",
+      "country": "Japon",
+      "zoom": 10,
+      "center": {
+        "lat": 35.6794327,
+        "lng": 139.7712666
+      },
+      "id": 6
     }
   ]
 }
