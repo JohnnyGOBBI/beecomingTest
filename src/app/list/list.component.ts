@@ -30,7 +30,7 @@ export class ListComponent implements OnInit {
   onDeleteCapital(id?: number): void {
     if(id) {
       this.listService.deleteCapital(id).subscribe();
-  }
+    }
   }
 
   onEditCapital(capital: Capital): void {

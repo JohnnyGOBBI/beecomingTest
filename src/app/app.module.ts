@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NewCapitalComponent } from './new-capital/new-capital.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NewCapitalComponent } from './new-capital/new-capital.component';
     MapComponent,
     NavComponent,
     ListComponent,
-    NewCapitalComponent
+    NewCapitalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
